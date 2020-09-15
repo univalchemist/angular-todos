@@ -1,0 +1,8 @@
+<p class="user-name">User Name: {{username}}</p>
+<div *ngIf="!userId" class="container">
+  <div class="todo-title">ToDos:</div>
+  <p *ngFor="let todo of todos" (click)="onClick(todo)" class="p-user-id">
+    userId: {{todo.userId}}
+  </p>
+</div>
+<app-detail *ngIf="userId" [userId]="userId" (goBack)="clear()"></app-detail>
