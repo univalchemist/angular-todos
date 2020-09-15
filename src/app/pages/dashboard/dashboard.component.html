@@ -2,7 +2,7 @@
 <div *ngIf="!userId" class="container">
   <h2>ToDos:</h2>
   <p *ngFor="let todo of todos" (click)="onClick(todo)" class="p-user-id">
-    userId: {{todo.userId}}
+    userId: {{todo.id}}
   </p>
 </div>
 <app-detail *ngIf="userId" [userId]="userId" (goBack)="clear()"></app-detail>
